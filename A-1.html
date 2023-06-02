@@ -7,50 +7,256 @@
     <title>A-1</title>
 </head>
 <style>
-    #wrap{width: 100%;}
-    #wrap #header{}
-    #wrap #header .hd_logo{}
-    #wrap #header .nav{}
-    #wrap #header .nav .menu{}
-    #wrap #main{}
-    #wrap #main #slider{}
-    #wrap #main #slider .slide_img{}
-    #wrap #main #contents{}
-    #wrap #main #contents .notice{}
-    #wrap #main #contents .banner{}
-    #wrap #main #contents .link{}
-    #wrap #footer{}
-    #wrap #footer .ft_logo{}
-    #wrap #footer .copyright{}
-    #wrap #footer .sns{}
+    /* reset */
+    * {
+        padding: 0;
+        margin: 0;
+        color: #333;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+    ul, li{
+        list-style: none;
+    }
+    #wrap{
+        width: 100%;
+        background-color: #fff;
+    }
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    /* A) header */
+    #header{
+        width: 100%;
+    }
+    #header .container{
+        display: flex;
+    }
+    #header .hd_logo{
+        width: 200px;
+        height: 100px;
+        background-color: #ddd;
+    }
+    /* nav - menu */
+    #header .nav {
+        width: calc(100% - 200px);
+        height: 100px;
+    }
+    #header .nav > ul {
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        background-color: #eee;
+    }
+    #header .nav > ul > li {
+        position: relative;
+    }
+    #header .nav > ul > li > a {
+        display: inline-block;
+        padding: 15px 45px;
+        text-align: left;
+        font-weight: bold;
+    }
+    #header .nav > ul > li > a:hover{
+        background-color: #4e8ad4;
+    }
+    #header .nav > ul > li > ul.submenu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #header .nav > ul > li > ul.submenu > li > a {
+        display: block;
+        padding: 10px 20px;
+    }
+    #header .nav > ul > li > ul.submenu > li > a:hover{
+        background-color: #c0dcff;
+    }
+    /* B) slider */
+    #main #slider{
+        height: 300px;
+    }
+    #main #slider .container{
+        background-color: #c7c7c7;
+        height: 300px;
+    }
+    /* #main #slider .slide_img{} */
+    /* C) contents */
+    #main #contents .container{
+        display: flex;
+    }
+    #main #contents .info{
+        width: 400px;
+        height: 200px;
+        background-color: #aaa;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    #main #contents .info h3{
+        padding-bottom: 5px;
+        font-size: 22px;
+    }
+    #main #contents .info h3 a.active{
+        text-decoration: underline;
+    }
+    #main #contents .info h3 a:first-child{
+        border-right: 2px solid #333;
+        padding-right: 10px;
+    }
+    #main #contents .info .info_cont{}
+    #main #contents .info .info_cont .notice{}
+    #main #contents .info .info_cont .notice ul{}
+    #main #contents .info .info_cont .notice ul li{
+        line-height: 30px;
+        font-size: 16px;
+    }
+    #main #contents .info .info_cont .notice ul li a {
+        padding-right: 10px;
+        width: 75%;
+        display: inline-block;
+    }
+    #main #contents .info .info_cont .notice ul li a:hover{
+        text-decoration: underline;
+    }
+    #main #contents .info .info_cont .notice ul li span{
+        width: 25%;
+        text-align: right;
+    }
+    #main #contents .info .info_cont .gallery{
+        display: none;
+    }
+    /* #main #contents .info .info_cont .gallery ul{}
+    #main #contents .info .info_cont .gallery ul li{}
+    #main #contents .info .info_cont .gallery ul li a{}
+    #main #contents .info .info_cont .gallery ul li span{} */
+    #main #contents .banner{
+        width: 400px;
+        height: 200px;
+        background-color: #ccc;
+    }
+    #main #contents .link{
+        width: 400px;
+        height: 200px;
+        background-color: #666;
+    }
+    /* D) footer */
+    #footer .container{
+        display: flex;
+    }
+    #footer .ft_logo{
+        width: 20%;
+        height: 100px;
+        background-color: #999;
+    }
+    #footer .copyright{
+        width: 60%;
+        height: 100px;
+        background-color: #777;
+    }
+    #footer .sns{
+        width: 20%;
+        height: 100px;
+        background-color: #e8e8e8;
+    }
 </style>
 <body>
     <div id="wrap">
         <header id="header">
-            <h1 class="hd_logo"></h1>
-            <nav class="nav"><!--메뉴-->
-                <div class="menu">menu1</div>
-                <div class="menu">menu2</div>
-                <div class="menu">menu3</div>
-                <div class="menu">menu4</div>
-            </nav>
+            <div class="container">
+                <h1 class="hd_logo"><a href="#">로고</a></h1>
+                <nav class="nav"><!--메뉴-->
+                    <ul>
+                        <li class="menu">
+                            <a href="#">TOP</a>
+                            <ul class="submenu">
+                                <li><a href="#">Blouse</a></li>
+                                <li><a href="#">T</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Knit</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">OUTER</a>
+                            <ul class="submenu">
+                                <li><a href="#">Jacket</a></li>
+                                <li><a href="#">Coat</a></li>
+                                <li><a href="#">Cardigan</a></li>
+                                <li><a href="#">Muffler</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">PANTS</a>
+                            <ul class="submenu">
+                                <li><a href="#">Jeans</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Long</a></li>
+                                <li><a href="#">Leggings</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">ACCESSORY</a>
+                            <ul class="submenu">
+                                <li><a href="#">Earing</a></li>
+                                <li><a href="#">Necklace</a></li>
+                                <li><a href="#">Ring</a></li>
+                                <li><a href="#">Bracelet</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main id="main">
             <article id="slider"><!--이미지슬라이드-->
-                <div class="slide_img"></div>
-                <div class="slide_img"></div>
-                <div class="slide_img"></div>
+                <div class="container">
+                    <div class="slide_img"></div>
+                    <div class="slide_img"></div>
+                    <div class="slide_img"></div>
+                </div>
             </article>
-            <section id="contents">
-                <article class="notice"></article><!--공지사항/갤러리 탭-->
-                <article class="banner"></article><!--배너-->
-                <article class="link"></article><!--바로가기링크-->
-            </section>
+            <article id="contents">
+                <div class="container">
+                    <section class="info">
+                        <h3>
+                            <a href="#" class="active">공지사항</a>
+                            <a href="#">갤러리</a>
+                        </h3>
+                        <div class="info_cont">
+                            <div class="notice">
+                                <ul>
+                                    <li><a href="#">2023년 휴관일 안내</a><span>2023.06.01</span></li>
+                                    <li><a href="#">2023년 2023년 온라인 예매 안내</a><span>2023.06.02</span></li>
+                                    <li><a href="#">2023년 휴관일 및 이벤트 안내</a><span>2023.06.03</span></li>
+                                    <li><a href="#">2023년 주차장 이용 및 숙박 안내</a><span>2023.06.04</span></li>
+                                </ul>
+                            </div>
+                            <div class="gallery">
+                                <ul>
+                                    <li><a href="#"><img src="" alt="이미지"></a></li>
+                                    <li><a href="#"><img src="" alt="이미지"></a></li>
+                                    <li><a href="#"><img src="" alt="이미지"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section><!--공지사항/갤러리 탭-->
+                    <section class="banner"></section><!--배너-->
+                    <section class="link"></section><!--바로가기링크-->
+                </div>
+            </article>
         </main>
         <footer id="footer">
-            <div class="ft_logo"></div>
-            <div class="copyright"></div>
-            <div class="sns"></div>
+            <div class="container">
+                <div class="ft_logo"></div>
+                <div class="copyright"></div>
+                <div class="sns"></div>
+            </div>
         </footer>
     </div>
 </body>
