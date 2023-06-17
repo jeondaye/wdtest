@@ -143,6 +143,12 @@ img{display: block;width: 100%;}
     overflow: hidden;
     background-color: #777;
 }
+#slideerwrap h5{
+    width: 1px;
+    height: 1px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
 #slideerwrap > div{
     width: 400%;
     height: 100%;
