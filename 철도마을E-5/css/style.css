@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0;color: #333;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: #333;}
+img{display: block;width: 100%;}
+#wrap{
+    width: 100%;
+}
+#main{
+    display: flex;
+    height: calc(100vh - 120px);
+}
+#header{
+    width: 200px;
+    background-color: #d2d2d2;
+}
+#header .logo{
+    width: 190px;
+    height: 45px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#header .nav > ul > li{
+    position: relative;
+    text-align: center;
+}
+#header .nav > ul > li > a{
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+#header .nav > ul > li > a:hover{
+    background-color: #fff;
+}
+#header .nav > ul > li > ul{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 200px;
+    display: none;
+    background-color: #fff;
+}
+#header .nav > ul > li > ul > li a{
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0;
+}
+#header .nav > ul > li > ul > li a:hover{
+    background-color: #eee;
+}
+#contents{
+    width: 400px;
+    /* height: 100%; */
+    /* background-color: #555; */
+    display: flex;
+    flex-direction: column;
+}
+
+#contents .banner{
+    width: 100%;
+    height: 15%;
+    background: url('../images/banner.jpg') no-repeat;
+    background-size: cover;
+    background-position: center 0;
+    overflow: hidden;
+}
+#contents .notice{
+    width: 100%;
+    height: 35%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#contents .gallery{
+    width: 100%;
+    height: 35%;
+    overflow: hidden;
+}
+#contents .gallery h3, #contents .notice h3{
+    background: pink;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+#contents .gallery ul{
+    display: flex;
+    justify-content: space-around;
+}
+#contents .gallery ul li{
+    width: 110px;
+    height: 150px;
+    background-size: cover;
+}
+#contents .gallery ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+}
+#contents .gallery ul li a:hover{
+    background: rgba(0,0,0,0);
+}
+#contents .gallery ul .g1{
+    background: url('../images/gallery01.jpg') no-repeat;
+}
+#contents .gallery ul .g2{
+    background: url('../images/gallery02.jpg') no-repeat;
+}
+#contents .gallery ul .g3{
+    background: url('../images/gallery03.jpg') no-repeat;
+}
+#contents .link{
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+}
+#contents .link ul{
+    display: flex;
+}
+#contents .link h3{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+#contents .link ul li{
+    width: 25%;
+    padding: 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+#slideerwrap{
+    width: calc(100% - 600px);
+    height: 100%;
+    overflow: hidden;
+    background-color: #777;
+}
+#slideerwrap > div{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+#slideerwrap .s1{background: url('../images/slider01.jpg') no-repeat;}
+#slideerwrap .s2{background: url('../images/slider02.jpg') no-repeat;}
+#slideerwrap .s3{background: url('../images/slider03.jpg') no-repeat;}
+#slideerwrap .slider{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+#slideerwrap .slider img{
+    width: 100%;
+}
+#footer{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    background-color: #999;
+}
+#footer .footer1{
+    width: 200px;
+}
+#footer .footer2{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+#footer .footer2 .footer2-1{
+    height: 60px;
+}
+#footer .footer2 .footer2-1 ul li{
+    display: inline-block;
+}
+#footer .footer2 .footer2-2{
+    height: 60px;
+}
+#footer .footer3{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .footer3 select{
+    width: 90%;
+    height: 30px;
+}
+
